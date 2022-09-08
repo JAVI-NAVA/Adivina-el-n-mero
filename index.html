@@ -1,0 +1,56 @@
+<meta charset="UTF-8">
+<h1> PRORAMA - JUEGO ADIVINA EL NÚMERO</h1>
+<hr>
+<script>
+
+	function saltarlinea ( ) {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<hr>");
+		}
+
+	function imprimir(frase)     {
+
+		document.write("<big>" + frase + "</big>");
+		saltarlinea();
+	}
+
+	
+
+	var numeroPensado = Math.round (Math.random()*10) ;
+
+	var intentos = 3;
+	var contador = 1;
+	
+	
+
+
+	while(contador<= intentos){
+
+	var intentosErrado = (intentos - contador);
+	
+	var numeroLanzado = parseInt(prompt("ingrese un numero entre 0 y 10"));
+
+	
+
+	if (numeroLanzado == numeroPensado) {
+
+		alert("Has adivinado!! en el intento: " + contador + " el numero pensado era:  " + numeroPensado );
+
+		break;
+
+	}
+
+	else { 
+
+		alert("usted erró, le quedan : " + intentosErrado + " intento" );
+	}
+
+	contador++ 
+}
+
+imprimir("El número pensado era: " + numeroPensado + " fin");
+
+
+	</script>
